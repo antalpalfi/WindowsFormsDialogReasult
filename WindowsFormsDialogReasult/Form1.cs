@@ -31,11 +31,6 @@ namespace WindowsFormsDialogReasult
             
             Rekenings rekenings1 = new Debit(10000, "Debit", rekeningnr);
             rekenings.Add(rekenings1);
-            //Rekenings rekenings2 = new Spaar(16012, "Spaar", rekeningnr);
-            //rekenings.Add(rekenings2);
-            //Rekenings rekenings3 = new Credit(20000, "Debit", rekeningnr);
-            //rekenings.Add(rekenings3);
-
             comboBox1.Items.Add("Credit");
             comboBox1.Items.Add("Spaar");
             comboBox1.Items.Add("Debit");
@@ -55,8 +50,8 @@ namespace WindowsFormsDialogReasult
                         credit.Add(item);
                     }
 
-                    listBoxCredit.DataSource = null;
-                    listBoxCredit.DataSource = credit;
+                    listBoxAccount.DataSource = null;
+                    listBoxAccount.DataSource = credit;
                     break;
                 case "Spaar":
                     btnOversc.Enabled = false;
@@ -67,8 +62,8 @@ namespace WindowsFormsDialogReasult
                         spaar.Add(item);
                     }
 
-                    listBoxCredit.DataSource = null;
-                    listBoxCredit.DataSource = spaar;
+                    listBoxAccount.DataSource = null;
+                    listBoxAccount.DataSource = spaar;
                     break;
 
                 case "Debit":
@@ -80,8 +75,8 @@ namespace WindowsFormsDialogReasult
                         debit.Add(item);
                     }
 
-                    listBoxCredit.DataSource = null;
-                    listBoxCredit.DataSource = debit;
+                    listBoxAccount.DataSource = null;
+                    listBoxAccount.DataSource = debit;
                     break;
                 default:
                     break;
@@ -90,8 +85,8 @@ namespace WindowsFormsDialogReasult
 
         private void listBoxCredit_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Rekenings selected = (Rekenings)listBoxCredit.SelectedItem;
-            if (listBoxCredit.DataSource != null)
+            Rekenings selected = (Rekenings)listBoxAccount.SelectedItem;
+            if (listBoxAccount.DataSource != null)
             {
                 labelInfo.Text = selected.Account();
             }
@@ -100,9 +95,7 @@ namespace WindowsFormsDialogReasult
 
         private void btnNiewR_Click(object sender, EventArgs e)
         {
-            //List<Credit> credit = new List<Credit>();
-            //listBoxCredit.DataSource = null;
-            //listBoxCredit.DataSource = credit;
+           
             if (comboBox1.Text == "Credit")
             {
                 Random rng = new Random();
@@ -122,8 +115,8 @@ namespace WindowsFormsDialogReasult
                 {
                     credit.Add(item);
                 }
-                listBoxCredit.DataSource = null;
-                listBoxCredit.DataSource = credit;
+                listBoxAccount.DataSource = null;
+                listBoxAccount.DataSource = credit;
             }
             else if (comboBox1.Text == "Spaar")
             {
@@ -142,8 +135,8 @@ namespace WindowsFormsDialogReasult
                 {
                     spaar.Add(item);
                 }
-                listBoxCredit.DataSource = null;
-                listBoxCredit.DataSource = spaar;
+                listBoxAccount.DataSource = null;
+                listBoxAccount.DataSource = spaar;
             }
             else if (comboBox1.Text == "Debit")
             {
@@ -162,16 +155,21 @@ namespace WindowsFormsDialogReasult
                 {
                     debit.Add(item);
                 }
-                listBoxCredit.DataSource = null;
-                listBoxCredit.DataSource = debit;
+                listBoxAccount.DataSource = null;
+                listBoxAccount.DataSource = debit;
 
             }
         }
 
         private void btnOversc_Click(object sender, EventArgs e)
         {
+            
             Overschrijven overschrijven = new Overschrijven();
-            overschrijven.Show();
+            if (overschrijven.ShowDialog()==DialogResult.OK)
+            {
+               
+            }
+            
         }
     }
 }

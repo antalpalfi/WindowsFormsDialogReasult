@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.listBoxCredit = new System.Windows.Forms.ListBox();
+            this.listBoxAccount = new System.Windows.Forms.ListBox();
             this.btnOversc = new System.Windows.Forms.Button();
             this.btnNiewR = new System.Windows.Forms.Button();
             this.labelInfo = new System.Windows.Forms.Label();
@@ -54,14 +54,14 @@
             this.comboBox1.TabIndex = 1;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // listBoxCredit
+            // listBoxAccount
             // 
-            this.listBoxCredit.FormattingEnabled = true;
-            this.listBoxCredit.Location = new System.Drawing.Point(192, 53);
-            this.listBoxCredit.Name = "listBoxCredit";
-            this.listBoxCredit.Size = new System.Drawing.Size(120, 95);
-            this.listBoxCredit.TabIndex = 4;
-            this.listBoxCredit.SelectedIndexChanged += new System.EventHandler(this.listBoxCredit_SelectedIndexChanged);
+            this.listBoxAccount.FormattingEnabled = true;
+            this.listBoxAccount.Location = new System.Drawing.Point(192, 53);
+            this.listBoxAccount.Name = "listBoxAccount";
+            this.listBoxAccount.Size = new System.Drawing.Size(120, 95);
+            this.listBoxAccount.TabIndex = 4;
+            this.listBoxAccount.SelectedIndexChanged += new System.EventHandler(this.listBoxCredit_SelectedIndexChanged);
             // 
             // btnOversc
             // 
@@ -99,7 +99,7 @@
             this.Controls.Add(this.labelInfo);
             this.Controls.Add(this.btnNiewR);
             this.Controls.Add(this.btnOversc);
-            this.Controls.Add(this.listBoxCredit);
+            this.Controls.Add(this.listBoxAccount);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -114,7 +114,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ListBox listBoxCredit;
+        private System.Windows.Forms.ListBox listBoxAccount;
         private System.Windows.Forms.Button btnOversc;
         private System.Windows.Forms.Button btnNiewR;
         private System.Windows.Forms.Label labelInfo;

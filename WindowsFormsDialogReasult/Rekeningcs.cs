@@ -18,7 +18,9 @@ namespace WindowsFormsDialogReasult
             Naam = naam;
             Kredit = kredit;
             AccountN = account;
-          
+        }
+        public Rekenings()
+        {
 
         }
 

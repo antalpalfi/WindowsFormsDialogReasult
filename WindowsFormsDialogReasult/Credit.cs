@@ -13,6 +13,9 @@ namespace WindowsFormsDialogReasult
         {
             CvNummer = cvnummer;
         }
-        
+        public override string Account()
+        {
+            return base.Account() + $"\n Uw cv nummer: {CvNummer}";
+        }
     }
 }
